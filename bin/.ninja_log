@@ -1,0 +1,8 @@
+# ninja log v5
+20	265	6468494662328362	CMakeFiles/Snake.dir/src/systems/singleton.cpp.obj	e4ddbee56826c75
+40	266	6468494662328362	CMakeFiles/Snake.dir/src/systems/listener.cpp.obj	b59e3eaf28c14775
+30	267	6468494662358280	CMakeFiles/Snake.dir/src/systems/signal.cpp.obj	e6e7e0aa6e357dbb
+51	323	6468494662946716	CMakeFiles/Snake.dir/src/events/gameEvent.cpp.obj	87b36b3fd02dc61b
+10	694	6468494666656919	CMakeFiles/Snake.dir/src/game.cpp.obj	297bb5de937fb665
+0	706	6468494666666893	CMakeFiles/Snake.dir/src/main.cpp.obj	9bd0619b1f253255
+707	849	6468494668207837	Snake.exe	6866cd211029c456
