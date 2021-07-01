@@ -91,6 +91,14 @@ build CMakeFiles\Snake.dir\src\events\gameEvent.cpp.obj: CXX_COMPILER__Snake_Rel
   TARGET_COMPILE_PDB = CMakeFiles\Snake.dir\
   TARGET_PDB = Snake.pdb
 
+build CMakeFiles\Snake.dir\src\systems\inputHandler.cpp.obj: CXX_COMPILER__Snake_Release ..\src\systems\inputHandler.cpp || cmake_object_order_depends_target_Snake
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -Wall -std:c++17
+  INCLUDES = -I..\src -I..\libraries\msvc\SFML-2.5.1\include
+  OBJECT_DIR = CMakeFiles\Snake.dir
+  OBJECT_FILE_DIR = CMakeFiles\Snake.dir\src\systems
+  TARGET_COMPILE_PDB = CMakeFiles\Snake.dir\
+  TARGET_PDB = Snake.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Snake
@@ -99,7 +107,7 @@ build CMakeFiles\Snake.dir\src\events\gameEvent.cpp.obj: CXX_COMPILER__Snake_Rel
 #############################################
 # Link the executable Snake.exe
 
-build Snake.exe: CXX_EXECUTABLE_LINKER__Snake_Release CMakeFiles\Snake.dir\src\main.cpp.obj CMakeFiles\Snake.dir\src\game.cpp.obj CMakeFiles\Snake.dir\src\systems\singleton.cpp.obj CMakeFiles\Snake.dir\src\systems\signal.cpp.obj CMakeFiles\Snake.dir\src\systems\listener.cpp.obj CMakeFiles\Snake.dir\src\events\gameEvent.cpp.obj | ..\libraries\msvc\SFML-2.5.1\lib\sfml-graphics.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-window.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-audio.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-network.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-system.lib
+build Snake.exe: CXX_EXECUTABLE_LINKER__Snake_Release CMakeFiles\Snake.dir\src\main.cpp.obj CMakeFiles\Snake.dir\src\game.cpp.obj CMakeFiles\Snake.dir\src\systems\singleton.cpp.obj CMakeFiles\Snake.dir\src\systems\signal.cpp.obj CMakeFiles\Snake.dir\src\systems\listener.cpp.obj CMakeFiles\Snake.dir\src\events\gameEvent.cpp.obj CMakeFiles\Snake.dir\src\systems\inputHandler.cpp.obj | ..\libraries\msvc\SFML-2.5.1\lib\sfml-graphics.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-window.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-audio.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-network.lib ..\libraries\msvc\SFML-2.5.1\lib\sfml-system.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG
   LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = ..\libraries\msvc\SFML-2.5.1\lib\sfml-graphics.lib  ..\libraries\msvc\SFML-2.5.1\lib\sfml-window.lib  ..\libraries\msvc\SFML-2.5.1\lib\sfml-audio.lib  ..\libraries\msvc\SFML-2.5.1\lib\sfml-network.lib  ..\libraries\msvc\SFML-2.5.1\lib\sfml-system.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

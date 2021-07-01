@@ -9,13 +9,9 @@ void Game::run() {
 		time = clock.restart();
 
 		window.clear();
-		sf::Event event;
-		while(window.pollEvent(event)){
-            if(event.type == sf::Event::Closed){
-                active = false;
-            }
-		}
 		
+		InputHandler::get().handleEvents();
+
 		window.display();
 	}
 }
@@ -25,6 +21,10 @@ Game::Game() {
 	window.setFramerateLimit(60);
 	window.setVerticalSyncEnabled(true);
 
+	InputHandler::get().registerWindow(&window);
+
+	InputHandler::get().addListener(this);
+
 	active = true;
 }
 
@@ -33,7 +33,9 @@ void Game::onNotify(const GameEvent& event) {
 }
 
 void Game::onNotify(const sf::Event& event) {
-
+	if (event.type == sf::Event::Closed) {
+		active = false;
+	}
 }
 
 Game::~Game() {

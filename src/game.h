@@ -4,6 +4,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
+#include "systems/inputHandler.h"
 
 class Game : public Listener<GameEvent>, public Listener<sf::Event>{
 private:
