@@ -5,7 +5,7 @@
 
 class Machine : Signal<StateEvent>, Listener<StateEvent> {
 private:
-	std::stack<State*> states;
+	std::stack<State*> states_;
 public:
 	void add(State* state);
 	void remove(unsigned int count = 1);

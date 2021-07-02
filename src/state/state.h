@@ -6,10 +6,10 @@ public:
 	bool isActive();
 	void setAcitve(bool active);
 
-	State(Machine& fsm);
+	State(Machine& machine);
 	virtual ~State() = default;
 private:
-	bool active;
+	bool active_;
 protected:
 	Machine& fsm;
 };

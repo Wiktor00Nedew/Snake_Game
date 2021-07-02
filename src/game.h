@@ -8,8 +8,8 @@
 
 class Game : public Listener<GameEvent>, public Listener<sf::Event>{
 private:
-	sf::RenderWindow window;
-	bool active;
+	sf::RenderWindow window_;
+	bool active_;
 
 public:
 	void run();	//runs the whole game loop

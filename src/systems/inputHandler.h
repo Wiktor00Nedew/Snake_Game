@@ -9,5 +9,5 @@ public:
 	void handleEvents();
 
 private:
-	sf::Window* window;
+	sf::Window* window_;
 };
