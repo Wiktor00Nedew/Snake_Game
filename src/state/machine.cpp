@@ -48,9 +48,9 @@ Machine::~Machine() {
 void Machine::onNotify(const StateEvent& event) {
 	if (event.type == StateEvent::Add) {
 		if (!states_.empty())
-			states_.top()->setAcitve(false);
+			states_.top()->setActive(false);
 		states_.push(event.add.state);
-		states_.top()->setAcitve(true);
+		states_.top()->setActive(true);
 	}
 	else if (event.type == StateEvent::Remove) {
 		for (int i = 0; i < event.remove.count; i++) {
@@ -68,7 +68,7 @@ void Machine::onNotify(const StateEvent& event) {
 		delete states_.top();
 		states_.pop();
 		states_.push(event.replace.state);
-		states_.top()->setAcitve(true);
+		states_.top()->setActive(true);
 	}
 	else if (event.type == StateEvent::Clear) {
 		while (!states_.empty()) {

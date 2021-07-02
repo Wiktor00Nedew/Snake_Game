@@ -1,5 +1,5 @@
-#ifndef SIGNAL_H
-#define SIGNAL_H
+#ifndef SNAKE_SIGNAL_H
+#define SNAKE_SIGNAL_H
 
 #include <queue>
 #include <set>
@@ -35,4 +35,4 @@ public:
 		}
 	}
 };
-#endif // !SIGNAL_H
+#endif // !SNAKE_SIGNAL_H

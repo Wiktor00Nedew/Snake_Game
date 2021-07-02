@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef SNAKE_GAME_H
+#define SNAKE_GAME_H
 
 #include "systems/listener.h"
 #include "events/gameEvent.h"
@@ -20,5 +20,5 @@ public:
 	Game();	//constructor
 	~Game();	//destructor
 };
-#endif // !GAME_H
+#endif // !SNAKE_GAME_H
 

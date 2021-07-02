@@ -1,5 +1,5 @@
-#ifndef INPUT_HANDLER_H
-#define INPUT_HANDLER_H
+#ifndef SNAKE_INPUTHANDLER_H
+#define SNAKE_INPUTHANDLER_H
 
 #include "singleton.h"
 #include "signal.h"
@@ -13,4 +13,4 @@ public:
 private:
 	sf::Window* window_;
 };
-#endif // !INPUT_HANDLER_H
+#endif // !SNAKE_INPUTHANDLER_H

@@ -1,19 +1,21 @@
-#ifndef STATE_H
-#define STATE_H
+#ifndef SNAKE_STATE_H
+#define SNAKE_STATE_H
 
 #include "machine.h"
 
-class State {
-public:
-	bool isActive();
-	void setAcitve(bool active);
+class Machine;
 
-	State(Machine& machine);
-	virtual ~State() = default;
-private:
-	bool active_;
-protected:
-	Machine& fsm;
+class State {
+    public:
+        bool isActive();
+        void setActive(bool active);
+
+        State(Machine& machine);
+        virtual ~State() = default;
+    private:
+        bool active_;
+    protected:
+        Machine& fsm;
 };
 
-#endif // !STATE_H
+#endif // !SNAKE_STATE_H

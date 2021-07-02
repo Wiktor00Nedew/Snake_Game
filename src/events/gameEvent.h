@@ -1,5 +1,5 @@
-#ifndef GAME_EVENT_H
-#define GAME_EVENT_H
+#ifndef SNAKE_GAMEEVENT_H
+#define SNAKE_GAMEEVENT_H
 
 #include "../systems/signal.h"
 
@@ -15,4 +15,4 @@ struct GameEvent {
 };
 
 extern Signal<GameEvent> eventSender;	//main game event signal  
-#endif // !GAME_EVENT_H
+#endif // !SNAKE_GAME_EVENT_H

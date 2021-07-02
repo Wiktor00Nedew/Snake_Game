@@ -1,13 +1,13 @@
 #include "state.h"
 
 State::State(Machine& machine) : fsm(machine) {
-	setAcitve(false);
+	setActive(false);
 }
 
 bool State::isActive() {
 	return active_;
 }
 
-void State::setAcitve(bool active) {
+void State::setActive(bool active) {
 	active_ = active;
 }

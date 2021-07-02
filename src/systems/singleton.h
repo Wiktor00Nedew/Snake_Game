@@ -1,5 +1,5 @@
-#ifndef SINGLETON_H
-#define SINGLETON_H
+#ifndef SNAKE_SINGLETON_H
+#define SNAKE_SINGLETON_H
 
 template<typename T>
 class Singleton {
@@ -15,4 +15,4 @@ public:
 protected:
 	Singleton() {}	//constructor
 };
-#endif // !SINGLETON_H
+#endif // !SNAKE_SINGLETON_H

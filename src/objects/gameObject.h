@@ -1,9 +1,9 @@
-#ifndef GAME_OBJECT_H
-#define GAME_OBJECT_H
+#ifndef SNAKE_GAMEOBJECT_H
+#define SNAKE_GAMEOBJECT_H
 
 #include <SFML/Graphics.hpp>
 
 class GameObject : public sf::Drawable, public sf::Transformable {
 
 };
-#endif // !GAME_OBJECT_H
+#endif // !SNAKE_GAME_OBJECT_H

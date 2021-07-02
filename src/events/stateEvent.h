@@ -1,38 +1,39 @@
+#ifndef SNAKE_STATEEVENT_H
+#define SNAKE_STATEEVENT_H
 
-#ifndef STATE_EVENT_H
-#define STATE_EVENT_H
+#include "state/state.h"
 
-#include "../state/state.h"
+class State;
 
-struct StateEvent {
-	StateEvent();
+class StateEvent {
+    public:
 
-	enum Type {
-		Add,
-		Remove,
-		Replace,
-		Clear,
-		None
-	};
+        enum Type {
+            Add,
+            Remove,
+            Replace,
+            Clear,
+            None
+        };
 
-	struct AddEvent {
-		State* state;
-	};
+        struct AddEvent {
+            State* state;
+        };
 
-	struct RemoveEvent {
-		unsigned int count;
-	};
+        struct RemoveEvent {
+            unsigned int count;
+        };
 
-	struct ReplaceEvent {
-		State* state;
-	};
+        struct ReplaceEvent {
+            State* state;
+        };
 
-	union {
-		AddEvent add;
-		ReplaceEvent replace;
-		RemoveEvent remove;
-	};
+        union {
+            AddEvent add;
+            ReplaceEvent replace;
+            RemoveEvent remove;
+        };
 
-	Type type;
+        Type type;
 };
-#endif // !STATE_EVENT_H
+#endif // !SNAKE_STATE_EVENT_H
