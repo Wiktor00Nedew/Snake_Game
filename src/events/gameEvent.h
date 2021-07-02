@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GAME_EVENT_H
+#define GAME_EVENT_H
+
 #include "../systems/signal.h"
 
 struct GameEvent {
@@ -12,4 +14,5 @@ struct GameEvent {
 
 };
 
-extern Signal<GameEvent> eventSender;	//main game event signal
+extern Signal<GameEvent> eventSender;	//main game event signal  
+#endif // !GAME_EVENT_H

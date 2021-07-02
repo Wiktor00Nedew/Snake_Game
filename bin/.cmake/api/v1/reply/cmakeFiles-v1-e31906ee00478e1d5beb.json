@@ -126,22 +126,22 @@
 			"path" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake"
 		},
 		{
-			"path" : "libraries/msvc/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake"
+			"path" : "libraries/win/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake"
 		},
 		{
-			"path" : "libraries/msvc/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake"
+			"path" : "libraries/win/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake"
 		},
 		{
-			"path" : "libraries/msvc/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets.cmake"
+			"path" : "libraries/win/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets.cmake"
 		},
 		{
-			"path" : "libraries/msvc/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-debug.cmake"
+			"path" : "libraries/win/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-debug.cmake"
 		},
 		{
-			"path" : "libraries/msvc/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
+			"path" : "libraries/win/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
 		},
 		{
-			"path" : "libraries/msvc/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake"
+			"path" : "libraries/win/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

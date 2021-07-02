@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GAME_H
+#define GAME_H
+
 #include "systems/listener.h"
 #include "events/gameEvent.h"
 #include <iostream>
@@ -6,7 +8,7 @@
 #include <SFML/System.hpp>
 #include "systems/inputHandler.h"
 
-class Game : public Listener<GameEvent>, public Listener<sf::Event>{
+class Game : public Listener<GameEvent>, public Listener<sf::Event> {
 private:
 	sf::RenderWindow window_;
 	bool active_;
@@ -18,3 +20,5 @@ public:
 	Game();	//constructor
 	~Game();	//destructor
 };
+#endif // !GAME_H
+

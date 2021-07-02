@@ -1,4 +1,6 @@
-#pragma once
+#ifndef INPUT_HANDLER_H
+#define INPUT_HANDLER_H
+
 #include "singleton.h"
 #include "signal.h"
 #include <SFML/Graphics.hpp>
@@ -11,3 +13,4 @@ public:
 private:
 	sf::Window* window_;
 };
+#endif // !INPUT_HANDLER_H

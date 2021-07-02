@@ -1,4 +1,6 @@
-#pragma once
+#ifndef STATE_H
+#define STATE_H
+
 #include "machine.h"
 
 class State {
@@ -13,3 +15,5 @@ private:
 protected:
 	Machine& fsm;
 };
+
+#endif // !STATE_H

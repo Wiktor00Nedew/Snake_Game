@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SINGLETON_H
+#define SINGLETON_H
 
 template<typename T>
 class Singleton {
@@ -12,5 +13,6 @@ public:
 
 	Singleton(Singleton const&) = delete;	//prevents initializing
 protected:
-	Singleton(){}	//constructor
+	Singleton() {}	//constructor
 };
+#endif // !SINGLETON_H

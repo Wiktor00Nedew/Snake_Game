@@ -8,7 +8,7 @@ void Machine::add(State* state) {
 	notify(event);
 }
 
-void Machine::remove(unsigned int count = 1) {
+void Machine::remove(unsigned int count) {
 	StateEvent event;
 	event.type = StateEvent::Remove;
 	event.remove.count = count;

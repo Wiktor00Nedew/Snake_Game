@@ -1,4 +1,7 @@
-#pragma once
+
+#ifndef STATE_EVENT_H
+#define STATE_EVENT_H
+
 #include "../state/state.h"
 
 struct StateEvent {
@@ -24,7 +27,7 @@ struct StateEvent {
 		State* state;
 	};
 
-	union{
+	union {
 		AddEvent add;
 		ReplaceEvent replace;
 		RemoveEvent remove;
@@ -32,3 +35,4 @@ struct StateEvent {
 
 	Type type;
 };
+#endif // !STATE_EVENT_H

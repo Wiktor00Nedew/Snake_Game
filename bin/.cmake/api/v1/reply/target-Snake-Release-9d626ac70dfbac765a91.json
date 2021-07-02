@@ -30,19 +30,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 21,
+				"line" : 23,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 27,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 24,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
@@ -78,7 +78,7 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "C:/Users/Wiktor/Desktop/Wiktor/C++ projects/Snake_Game/Snake_Game/libraries/msvc/SFML-2.5.1/include"
+					"path" : "C:/Users/Wiktor/Desktop/Wiktor/C++ projects/Snake_Game/Snake_Game/libraries/win/SFML-2.5.1/include"
 				}
 			],
 			"language" : "CXX",
@@ -121,27 +121,27 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\libraries\\msvc\\SFML-2.5.1\\lib\\sfml-graphics.lib",
+				"fragment" : "..\\libraries\\win\\SFML-2.5.1\\lib\\libsfml-graphics.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\libraries\\msvc\\SFML-2.5.1\\lib\\sfml-window.lib",
+				"fragment" : "..\\libraries\\win\\SFML-2.5.1\\lib\\libsfml-window.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\libraries\\msvc\\SFML-2.5.1\\lib\\sfml-audio.lib",
+				"fragment" : "..\\libraries\\win\\SFML-2.5.1\\lib\\libsfml-audio.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\libraries\\msvc\\SFML-2.5.1\\lib\\sfml-network.lib",
+				"fragment" : "..\\libraries\\win\\SFML-2.5.1\\lib\\libsfml-network.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\libraries\\msvc\\SFML-2.5.1\\lib\\sfml-system.lib",
+				"fragment" : "..\\libraries\\win\\SFML-2.5.1\\lib\\libsfml-system.a",
 				"role" : "libraries"
 			},
 			{

@@ -1,7 +1,12 @@
-#pragma once
+#ifndef MACHINE_H
+#define MACHINE_H
+
+
 #include "../events/stateEvent.h"
 #include "systems/signal.h"
 #include <stack>
+
+class State;
 
 class Machine : Signal<StateEvent>, Listener<StateEvent> {
 private:
@@ -19,3 +24,5 @@ public:
 	Machine();
 	~Machine();
 };
+
+#endif // !MACHINE_H

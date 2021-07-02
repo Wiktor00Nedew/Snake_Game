@@ -50,16 +50,16 @@ The CXX compiler identification is MSVC, found in "C:/Users/Wiktor/Desktop/Wikto
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Wiktor/Desktop/Wiktor/C++ projects/Snake_Game/Snake_Game/bin/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f47be && [1/2] Building C object CMakeFiles\cmTC_f47be.dir\CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_f47be.exe
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_00e2f && [1/2] Building C object CMakeFiles\cmTC_00e2f.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_00e2f.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Wiktor/Desktop/Wiktor/C++ projects/Snake_Game/Snake_Game/bin/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_aed52 && [1/2] Building CXX object CMakeFiles\cmTC_aed52.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_aed52.exe
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_50563 && [1/2] Building CXX object CMakeFiles\cmTC_50563.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_50563.exe
 
 
 

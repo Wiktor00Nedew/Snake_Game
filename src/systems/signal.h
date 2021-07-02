@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SIGNAL_H
+#define SIGNAL_H
+
 #include <queue>
 #include <set>
 #include "listener.h"
@@ -33,3 +35,4 @@ public:
 		}
 	}
 };
+#endif // !SIGNAL_H
