@@ -11,3 +11,7 @@ void InputHandler::handleEvents() {
 	}
 	Signal::handleEvents();
 }
+
+void InputHandler::init() {
+
+}

@@ -30,19 +30,11 @@ void Machine::replace(State* state) {
 
 State* Machine::getState() {
 	handleEvents();
-	if (states_.empty()) {
-		std::cout << "Error: No states in state machine" << "\n";
-		return nullptr;
+	if (!states_.empty()) {
+        return states_.top();
 	}
-	return states_.top();
-}
+    std::cout << "Error: No states in state machine" << "\n";
 
-Machine::Machine() {
-	addListener(this);
-}
-
-Machine::~Machine() {
-	removeListener(this);
 }
 
 void Machine::onNotify(const StateEvent& event) {
@@ -76,4 +68,12 @@ void Machine::onNotify(const StateEvent& event) {
 			states_.pop();
 		}
 	}
+}
+
+Machine::Machine() {
+    addListener(this);
+}
+
+Machine::~Machine() {
+    removeListener(this);
 }

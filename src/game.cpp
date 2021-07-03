@@ -1,7 +1,8 @@
 #include "game.h"
+#include <systems/inputHandler.h>
+#include <iostream>
 
 void Game::run() {
-	
 	sf::Clock clock;
 	sf::Time time;
 
@@ -20,11 +21,11 @@ Game::Game() {
 	window_.create(sf::VideoMode(1920, 1080), "Snake", sf::Style::Default);
 	window_.setFramerateLimit(60);
 	window_.setVerticalSyncEnabled(true);
-
+    std::cout << "created window" << "\n";
 	InputHandler::get().registerWindow(&window_);
 
 	InputHandler::get().addListener(this);
-
+    std::cout << "added input handler" << "\n";
 	active_ = true;
 }
 

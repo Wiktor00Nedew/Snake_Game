@@ -1,16 +1,16 @@
 #ifndef SNAKE_INPUTHANDLER_H
 #define SNAKE_INPUTHANDLER_H
 
-#include "singleton.h"
 #include "signal.h"
-#include <SFML/Graphics.hpp>
+#include "singleton.h"
+#include <SFML/Window.hpp>
 
 class InputHandler : public Singleton<InputHandler>, public Signal<sf::Event> {
-public:
-	void registerWindow(sf::Window* window);
-	void handleEvents();
-
-private:
-	sf::Window* window_;
+    private:
+        sf::Window* window_;
+    public:
+        void init();
+        void registerWindow(sf::Window* window);
+        void handleEvents();
 };
 #endif // !SNAKE_INPUTHANDLER_H

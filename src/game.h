@@ -6,12 +6,14 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
-#include "systems/inputHandler.h"
+
+//#include "state/machine.h"
 
 class Game : public Listener<GameEvent>, public Listener<sf::Event> {
 private:
 	sf::RenderWindow window_;
 	bool active_;
+    //Machine scenes;
 
 public:
 	void run();	//runs the whole game loop

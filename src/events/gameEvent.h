@@ -4,7 +4,7 @@
 #include "../systems/signal.h"
 
 struct GameEvent {
-	GameEvent();	//constructor
+	GameEvent() = default;	//constructor
 
 	enum Type {	//possible event types
 		GameOver

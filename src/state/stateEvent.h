@@ -1,20 +1,18 @@
 #ifndef SNAKE_STATEEVENT_H
 #define SNAKE_STATEEVENT_H
 
-#include "state/state.h"
-
-class State;
+#include "state.h"
 
 class StateEvent {
     public:
-
         enum Type {
             Add,
             Remove,
             Replace,
-            Clear,
-            None
+            Clear
         };
+
+        Type type;
 
         struct AddEvent {
             State* state;
@@ -34,6 +32,5 @@ class StateEvent {
             RemoveEvent remove;
         };
 
-        Type type;
 };
 #endif // !SNAKE_STATE_EVENT_H

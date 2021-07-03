@@ -1,13 +1,11 @@
 #ifndef SNAKE_MACHINE_H
 #define SNAKE_MACHINE_H
 
-#include "events/stateEvent.h"
-#include "systems/signal.h"
-#include "state.h"
 #include <stack>
+#include <systems/signal.h>
+#include "state.h"
+#include "stateEvent.h"
 
-class StateEvent;
-class State;
 
 class Machine : public Signal<StateEvent>, public Listener<StateEvent> {
     private:

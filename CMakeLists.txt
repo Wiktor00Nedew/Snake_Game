@@ -20,7 +20,7 @@ endif(WIN32)
 find_package(SFML 2.5 COMPONENTS graphics window system audio network REQUIRED)
 
 # add execs
-add_executable(Snake src/main.cpp src/game.h src/game.cpp src/systems/singleton.cpp  src/systems/singleton.h src/systems/signal.h src/systems/signal.cpp src/systems/listener.h src/systems/listener.cpp src/events/gameEvent.h src/events/gameEvent.cpp "src/systems/inputHandler.h" "src/systems/inputHandler.cpp" "src/events/stateEvent.h" "src/events/stateEvent.cpp" "src/state/state.h" "src/state/state.cpp" "src/state/machine.h" "src/state/machine.cpp" "src/objects/gameObject.h" "src/objects/gameObject.cpp")
+add_executable(Snake "src/main.cpp" "src/game.h" "src/game.cpp" "src/systems/singleton.cpp" "src/systems/singleton.h" "src/systems/signal.h" "src/systems/signal.cpp" "src/systems/listener.h" "src/systems/listener.cpp" "src/events/gameEvent.h" "src/events/gameEvent.cpp" "src/systems/inputHandler.h" "src/systems/inputHandler.cpp" "src/state/stateEvent.h" "src/state/stateEvent.cpp" "src/state/state.h" "src/state/state.cpp" "src/state/machine.h" "src/state/machine.cpp" "src/objects/gameObject.h" "src/objects/gameObject.cpp")
 
 # compile options
 target_compile_options(Snake PRIVATE -Wall)
