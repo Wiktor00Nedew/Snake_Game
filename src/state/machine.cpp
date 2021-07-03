@@ -34,7 +34,7 @@ State* Machine::getState() {
         return states_.top();
 	}
     std::cout << "Error: No states in state machine" << "\n";
-
+	return nullptr;
 }
 
 void Machine::onNotify(const StateEvent& event) {
@@ -45,7 +45,7 @@ void Machine::onNotify(const StateEvent& event) {
 		states_.top()->setActive(true);
 	}
 	else if (event.type == StateEvent::Remove) {
-		for (int i = 0; i < event.remove.count; i++) {
+		for (unsigned int i = 0; i < event.remove.count; i++) {
 			if (states_.empty())
 				break;
 			delete states_.top();

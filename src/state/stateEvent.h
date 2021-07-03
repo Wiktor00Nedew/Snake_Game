@@ -4,33 +4,31 @@
 #include "state.h"
 
 class StateEvent {
-    public:
-        enum Type {
-            Add,
-            Remove,
-            Replace,
-            Clear
-        };
+public:
+    enum Type {
+        Add,
+        Remove,
+        Replace,
+        Clear
+    };
 
-        Type type;
+    Type type;
 
-        struct AddEvent {
-            State* state;
-        };
+    struct AddEvent {
+        State* state;
+    };
+    struct RemoveEvent {
+        unsigned int count;
+    };
 
-        struct RemoveEvent {
-            unsigned int count;
-        };
+    struct ReplaceEvent {
+        State* state;
+    };
 
-        struct ReplaceEvent {
-            State* state;
-        };
-
-        union {
-            AddEvent add;
-            ReplaceEvent replace;
-            RemoveEvent remove;
-        };
-
+    union {
+        AddEvent add;
+        ReplaceEvent replace;
+        RemoveEvent remove;
+    };
 };
 #endif // !SNAKE_STATE_EVENT_H

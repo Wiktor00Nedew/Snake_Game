@@ -5,27 +5,37 @@
 void Game::run() {
 	sf::Clock clock;
 	sf::Time time;
+	Scene* scene;
 
 	while (active_) {
 		time = clock.restart();
+		scene = getScene();
 
-		window_.clear();
-		
 		InputHandler::get().handleEvents();
 
+		scene->update(time);
+
+        window_.clear();
+
+        window_.draw(*scene);
 		window_.display();
 	}
+    eventSender.removeListener(this);
 }
 
 Game::Game() {
+
 	window_.create(sf::VideoMode(1920, 1080), "Snake", sf::Style::Default);
 	window_.setFramerateLimit(60);
 	window_.setVerticalSyncEnabled(true);
-    std::cout << "created window" << "\n";
+
 	InputHandler::get().registerWindow(&window_);
 
 	InputHandler::get().addListener(this);
-    std::cout << "added input handler" << "\n";
+	eventSender.addListener(this);
+
+	scenes_.add(newGame());
+
 	active_ = true;
 }
 
@@ -40,5 +50,16 @@ void Game::onNotify(const sf::Event& event) {
 }
 
 Game::~Game() {
+    InputHandler::get().removeListener(this);
+    scenes_.clear();
+}
 
+Scene* Game::newGame() {
+    Scene* scene = new Scene(scenes_);
+
+    return scene;
+}
+
+Scene* Game::getScene() {
+    return static_cast<Scene*>(scenes_.getState());
 }

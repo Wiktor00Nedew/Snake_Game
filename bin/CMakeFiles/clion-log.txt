@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2021.1\bin\cmake\win\bin\cmake.exe" -G "CodeBlocks - MinGW Makefiles" C:\Users\Wiktor\CLionProjects\Snake_Game
+-- Found SFML 2.5.1 in C:/Users/Wiktor/CLionProjects/Snake_Game/libraries/win/SFML-2.5.1/lib/cmake/SFML
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Wiktor/CLionProjects/Snake_Game/bin

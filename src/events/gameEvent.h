@@ -7,7 +7,7 @@ struct GameEvent {
 	GameEvent() = default;	//constructor
 
 	enum Type {	//possible event types
-		GameOver
+		Closed
 	};
 
 	Type type;	//event type

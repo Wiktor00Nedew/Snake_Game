@@ -6,14 +6,14 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
-
-//#include "state/machine.h"
+#include <systems/scene.h>
+#include "state/machine.h"
 
 class Game : public Listener<GameEvent>, public Listener<sf::Event> {
 private:
 	sf::RenderWindow window_;
 	bool active_;
-    //Machine scenes;
+    Machine scenes_;
 
 public:
 	void run();	//runs the whole game loop
@@ -21,6 +21,8 @@ public:
 	void onNotify(const sf::Event& event) override;	//reacts to sf::Event 
 	Game();	//constructor
 	~Game();	//destructor
+	Scene* getScene();
+	Scene* newGame();
 };
 #endif // !SNAKE_GAME_H
 

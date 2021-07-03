@@ -8,20 +8,20 @@
 
 
 class Machine : public Signal<StateEvent>, public Listener<StateEvent> {
-    private:
-        std::stack<State*> states_;
-    public:
-        void add(State* state);
-        void remove(unsigned int count = 1);
-        void replace(State* state);
-        void clear();
+private:
+    std::stack<State*> states_;
+public:
+    void add(State* state);
+    void remove(unsigned int count = 1);
+    void replace(State* state);
+    void clear();
 
-        void onNotify(const StateEvent& event) override;
+    void onNotify(const StateEvent& event) override;
 
-        State* getState();
+    State* getState();
 
-        Machine();
-        ~Machine();
+    Machine();
+    ~Machine();
 };
 
 #endif // !SNAKE_MACHINE_H
