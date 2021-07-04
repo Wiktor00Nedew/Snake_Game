@@ -28,4 +28,8 @@ public:
     GameObject();
     virtual ~GameObject() = default;
 };
+
+extern int dx[4];
+extern int dy[4];
+
 #endif // !SNAKE_GAME_OBJECT_H

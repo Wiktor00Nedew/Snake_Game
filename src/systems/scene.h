@@ -22,6 +22,16 @@ public:
     Scene(Machine& machine);
     ~Scene();
 
+    enum Type{
+        Game,
+        Menu,
+        Pause,
+        Settings,
+        Advancements
+    };
+
+    Type type;
+
 protected:
     std::vector<GameObject*> objects_;
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;

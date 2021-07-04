@@ -330,6 +330,60 @@ src/state/stateEvent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/state/stateEvent.cpp.s
 .PHONY : src/state/stateEvent.cpp.s
 
+src/systems/assetManager.obj: src/systems/assetManager.cpp.obj
+
+.PHONY : src/systems/assetManager.obj
+
+# target to build an object file
+src/systems/assetManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/assetManager.cpp.obj
+.PHONY : src/systems/assetManager.cpp.obj
+
+src/systems/assetManager.i: src/systems/assetManager.cpp.i
+
+.PHONY : src/systems/assetManager.i
+
+# target to preprocess a source file
+src/systems/assetManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/assetManager.cpp.i
+.PHONY : src/systems/assetManager.cpp.i
+
+src/systems/assetManager.s: src/systems/assetManager.cpp.s
+
+.PHONY : src/systems/assetManager.s
+
+# target to generate assembly for a file
+src/systems/assetManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/assetManager.cpp.s
+.PHONY : src/systems/assetManager.cpp.s
+
+src/systems/field.obj: src/systems/field.cpp.obj
+
+.PHONY : src/systems/field.obj
+
+# target to build an object file
+src/systems/field.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/field.cpp.obj
+.PHONY : src/systems/field.cpp.obj
+
+src/systems/field.i: src/systems/field.cpp.i
+
+.PHONY : src/systems/field.i
+
+# target to preprocess a source file
+src/systems/field.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/field.cpp.i
+.PHONY : src/systems/field.cpp.i
+
+src/systems/field.s: src/systems/field.cpp.s
+
+.PHONY : src/systems/field.s
+
+# target to generate assembly for a file
+src/systems/field.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/field.cpp.s
+.PHONY : src/systems/field.cpp.s
+
 src/systems/inputHandler.obj: src/systems/inputHandler.cpp.obj
 
 .PHONY : src/systems/inputHandler.obj
@@ -383,6 +437,33 @@ src/systems/listener.s: src/systems/listener.cpp.s
 src/systems/listener.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/listener.cpp.s
 .PHONY : src/systems/listener.cpp.s
+
+src/systems/map.obj: src/systems/map.cpp.obj
+
+.PHONY : src/systems/map.obj
+
+# target to build an object file
+src/systems/map.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/map.cpp.obj
+.PHONY : src/systems/map.cpp.obj
+
+src/systems/map.i: src/systems/map.cpp.i
+
+.PHONY : src/systems/map.i
+
+# target to preprocess a source file
+src/systems/map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/map.cpp.i
+.PHONY : src/systems/map.cpp.i
+
+src/systems/map.s: src/systems/map.cpp.s
+
+.PHONY : src/systems/map.s
+
+# target to generate assembly for a file
+src/systems/map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/map.cpp.s
+.PHONY : src/systems/map.cpp.s
 
 src/systems/scene.obj: src/systems/scene.cpp.obj
 
@@ -495,12 +576,21 @@ help:
 	@echo ... src/state/stateEvent.obj
 	@echo ... src/state/stateEvent.i
 	@echo ... src/state/stateEvent.s
+	@echo ... src/systems/assetManager.obj
+	@echo ... src/systems/assetManager.i
+	@echo ... src/systems/assetManager.s
+	@echo ... src/systems/field.obj
+	@echo ... src/systems/field.i
+	@echo ... src/systems/field.s
 	@echo ... src/systems/inputHandler.obj
 	@echo ... src/systems/inputHandler.i
 	@echo ... src/systems/inputHandler.s
 	@echo ... src/systems/listener.obj
 	@echo ... src/systems/listener.i
 	@echo ... src/systems/listener.s
+	@echo ... src/systems/map.obj
+	@echo ... src/systems/map.i
+	@echo ... src/systems/map.s
 	@echo ... src/systems/scene.obj
 	@echo ... src/systems/scene.i
 	@echo ... src/systems/scene.s

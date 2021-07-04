@@ -123,6 +123,18 @@
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/stateEvent.h">
 			<Option target="Snake"/>
 		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/assetManager.cpp">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/assetManager.h">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/field.cpp">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/field.h">
+			<Option target="Snake"/>
+		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/inputHandler.cpp">
 			<Option target="Snake"/>
 		</Unit>
@@ -133,6 +145,12 @@
 			<Option target="Snake"/>
 		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/listener.h">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/map.cpp">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/map.h">
 			<Option target="Snake"/>
 		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/scene.cpp">

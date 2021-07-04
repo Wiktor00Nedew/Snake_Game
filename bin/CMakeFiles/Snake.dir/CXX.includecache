@@ -676,13 +676,41 @@ SFML/Config.hpp
 
 ../libraries/win/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+../src/events/gameEvent.h
+../systems/signal.h
+../src/systems/signal.h
+
 ../src/objects/gameObject.h
 SFML/Graphics.hpp
 -
 SFML/System.hpp
 -
 
+../src/state/machine.h
+stack
+-
+systems/signal.h
+-
+state.h
 ../src/state/state.h
+stateEvent.h
+../src/state/stateEvent.h
+
+../src/state/state.h
+
+../src/state/stateEvent.h
+state.h
+../src/state/state.h
+
+../src/systems/assetManager.h
+singleton.h
+../src/systems/singleton.h
+SFML/Graphics.hpp
+-
+
+../src/systems/field.h
+SFML/Graphics.hpp
+-
 
 ../src/systems/inputHandler.h
 signal.h
@@ -693,6 +721,12 @@ SFML/Window.hpp
 -
 
 ../src/systems/listener.h
+
+../src/systems/map.h
+field.h
+../src/systems/field.h
+vector
+-
 
 ../src/systems/scene.h
 SFML/Graphics.hpp
@@ -718,10 +752,6 @@ listener.h
 
 ../src/systems/singleton.h
 
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/events/gameEvent.h
-../systems/signal.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/signal.h
-
 C:/Users/Wiktor/CLionProjects/Snake_Game/src/game.cpp
 game.h
 C:/Users/Wiktor/CLionProjects/Snake_Game/src/game.h
@@ -729,12 +759,14 @@ systems/inputHandler.h
 -
 iostream
 -
+systems/assetManager.h
+-
 
 C:/Users/Wiktor/CLionProjects/Snake_Game/src/game.h
 systems/listener.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/listener.h
+-
 events/gameEvent.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/events/gameEvent.h
+-
 iostream
 -
 SFML/Graphics.hpp
@@ -744,31 +776,7 @@ SFML/System.hpp
 systems/scene.h
 -
 state/machine.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/machine.h
-
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/machine.h
-stack
 -
-systems/signal.h
+systems/map.h
 -
-state.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/state.h
-stateEvent.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/stateEvent.h
-
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/state.h
-
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/stateEvent.h
-state.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/state.h
-
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/listener.h
-
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/signal.h
-queue
--
-set
--
-listener.h
-C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/listener.h
 

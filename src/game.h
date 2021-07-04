@@ -1,19 +1,22 @@
 #ifndef SNAKE_GAME_H
 #define SNAKE_GAME_H
 
-#include "systems/listener.h"
-#include "events/gameEvent.h"
+#include <systems/listener.h>
+#include <events/gameEvent.h>
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <systems/scene.h>
-#include "state/machine.h"
+#include <state/machine.h>
+#include <systems/map.h>
 
 class Game : public Listener<GameEvent>, public Listener<sf::Event> {
 private:
 	sf::RenderWindow window_;
 	bool active_;
     Machine scenes_;
+
+    Map map_;
 
 public:
 	void run();	//runs the whole game loop
