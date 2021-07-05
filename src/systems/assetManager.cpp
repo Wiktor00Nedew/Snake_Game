@@ -5,8 +5,8 @@
 #include "assetManager.h"
 
 void AssetManager::load() {
-    pathImage.loadFromFile("../../assets/path.png");
-    wallImage.loadFromFile("../../assets/wall.png");
+    pathImage.loadFromFile("../assets/path.png");
+    wallImage.loadFromFile("../assets/wall.png");
 
     pathTexture.loadFromImage(pathImage);
     wallTexture.loadFromImage(wallImage);

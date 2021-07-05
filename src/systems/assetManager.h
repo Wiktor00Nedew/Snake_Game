@@ -14,11 +14,12 @@ public:
     sf::Sprite wall;
     sf::Sprite path;
 
-private:
     sf::Image wallImage;
     sf::Image pathImage;
     sf::Texture wallTexture;
     sf::Texture pathTexture;
+private:
+
 };
 
 
