@@ -15,12 +15,12 @@ void Game::run() {
 		InputHandler::get().handleEvents();
 
 		scene->update(time);
-		std::cout << "updated scene" << "\n";
+		//std::cout << "updated scene" << "\n";
         window_.clear();
         if(scene->type == Scene::Game)
             window_.draw(map_);
         window_.draw(*scene);
-        std::cout << "drawn scene" << "\n";
+        //std::cout << "drawn scene" << "\n";
 		window_.display();
 	}
     eventSender.removeListener(this);
@@ -58,7 +58,7 @@ Game::~Game() {
 Scene* Game::newGame() {
     Scene* scene = new Scene(scenes_);
     scene->type = Scene::Game;
-    scene->addObject(new Snake(AssetManager::get().head_right, map_));
+    scene->addObject(new Snake(map_));
     return scene;
 }
 

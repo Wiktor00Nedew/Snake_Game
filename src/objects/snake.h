@@ -18,7 +18,7 @@ public:
 
     void onNotify(const GameEvent& event);
 
-    Snake(sf::Sprite& sprite, Map& map);
+    Snake(Map& map);
     ~Snake();
 
 private:
@@ -32,12 +32,13 @@ private:
     sf::Time timeToPassField_;
 
     unsigned tailLength_;
-    sf::Sprite& headSprite_;
+    sf::Sprite* headSprite_;
 
     struct Component{
         sf::Sprite* sprite;
         Direction dir;
-        sf::Vector2u nextPos;
+        //sf::Vector2u nextPos;
+        sf::Vector2u pos;
     };
 
     std::vector<Component> tail_;
