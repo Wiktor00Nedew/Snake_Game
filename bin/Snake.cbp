@@ -105,6 +105,12 @@
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/gameObject.h">
 			<Option target="Snake"/>
 		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/snake.cpp">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/snake.h">
+			<Option target="Snake"/>
+		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/machine.cpp">
 			<Option target="Snake"/>
 		</Unit>

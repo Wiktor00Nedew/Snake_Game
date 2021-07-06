@@ -2,6 +2,7 @@
 #include <systems/inputHandler.h>
 #include <iostream>
 #include <systems/assetManager.h>
+#include <objects/snake.h>
 
 void Game::run() {
 	sf::Clock clock;
@@ -14,10 +15,12 @@ void Game::run() {
 		InputHandler::get().handleEvents();
 
 		scene->update(time);
+		std::cout << "updated scene" << "\n";
         window_.clear();
         if(scene->type == Scene::Game)
             window_.draw(map_);
         window_.draw(*scene);
+        std::cout << "drawn scene" << "\n";
 		window_.display();
 	}
     eventSender.removeListener(this);
@@ -25,7 +28,7 @@ void Game::run() {
 
 Game::Game() {
     AssetManager::get().load();
-	window_.create(sf::VideoMode(1920, 1080), "Snake", sf::Style::Default);
+	window_.create(sf::VideoMode(1920, 1080), "Snake", sf::Style::Fullscreen);
 	window_.setFramerateLimit(60);
 	window_.setVerticalSyncEnabled(true);
 	InputHandler::get().registerWindow(&window_);
@@ -55,6 +58,7 @@ Game::~Game() {
 Scene* Game::newGame() {
     Scene* scene = new Scene(scenes_);
     scene->type = Scene::Game;
+    scene->addObject(new Snake(AssetManager::get().head_right, map_));
     return scene;
 }
 

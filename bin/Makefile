@@ -249,6 +249,33 @@ src/objects/gameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/gameObject.cpp.s
 .PHONY : src/objects/gameObject.cpp.s
 
+src/objects/snake.obj: src/objects/snake.cpp.obj
+
+.PHONY : src/objects/snake.obj
+
+# target to build an object file
+src/objects/snake.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/snake.cpp.obj
+.PHONY : src/objects/snake.cpp.obj
+
+src/objects/snake.i: src/objects/snake.cpp.i
+
+.PHONY : src/objects/snake.i
+
+# target to preprocess a source file
+src/objects/snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/snake.cpp.i
+.PHONY : src/objects/snake.cpp.i
+
+src/objects/snake.s: src/objects/snake.cpp.s
+
+.PHONY : src/objects/snake.s
+
+# target to generate assembly for a file
+src/objects/snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/snake.cpp.s
+.PHONY : src/objects/snake.cpp.s
+
 src/state/machine.obj: src/state/machine.cpp.obj
 
 .PHONY : src/state/machine.obj
@@ -567,6 +594,9 @@ help:
 	@echo ... src/objects/gameObject.obj
 	@echo ... src/objects/gameObject.i
 	@echo ... src/objects/gameObject.s
+	@echo ... src/objects/snake.obj
+	@echo ... src/objects/snake.i
+	@echo ... src/objects/snake.s
 	@echo ... src/state/machine.obj
 	@echo ... src/state/machine.i
 	@echo ... src/state/machine.s

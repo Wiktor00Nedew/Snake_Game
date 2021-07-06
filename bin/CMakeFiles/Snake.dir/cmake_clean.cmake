@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Snake.dir/src/game.cpp.obj"
   "CMakeFiles/Snake.dir/src/main.cpp.obj"
   "CMakeFiles/Snake.dir/src/objects/gameObject.cpp.obj"
+  "CMakeFiles/Snake.dir/src/objects/snake.cpp.obj"
   "CMakeFiles/Snake.dir/src/state/machine.cpp.obj"
   "CMakeFiles/Snake.dir/src/state/state.cpp.obj"
   "CMakeFiles/Snake.dir/src/state/stateEvent.cpp.obj"

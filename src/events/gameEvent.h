@@ -1,13 +1,14 @@
 #ifndef SNAKE_GAMEEVENT_H
 #define SNAKE_GAMEEVENT_H
 
-#include "../systems/signal.h"
+#include <systems/signal.h>
 
 struct GameEvent {
 	GameEvent() = default;	//constructor
 
 	enum Type {	//possible event types
-		Closed
+		Closed,
+		GameOver
 	};
 
 	Type type;	//event type
