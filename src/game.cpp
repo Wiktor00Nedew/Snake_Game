@@ -17,10 +17,13 @@ void Game::run() {
 		scene->update(time);
 
 		eventSender.handleEvents();
+
         window_.clear();
-        if(scene->type == Scene::Game)
+        if(scene->type == Scene::Game){
             window_.draw(map_);
+        }
         window_.draw(*scene);
+        window_.draw(stats_);
 		window_.display();
 	}
     eventSender.removeListener(this);
@@ -58,6 +61,7 @@ Game::~Game() {
 Scene* Game::newGame() {
     Scene* scene = new Scene(scenes_);
     scene->type = Scene::Game;
+    scene->addObject(new Point(map_));
     scene->addObject(new Snake(map_));
     return scene;
 }

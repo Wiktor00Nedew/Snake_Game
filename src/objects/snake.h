@@ -8,6 +8,7 @@
 #include <events/gameEvent.h>
 #include <systems/listener.h>
 #include <systems/map.h>
+#include "point.h"
 
 class Snake : public GameObject, public Listener<GameEvent>{
 public:
@@ -16,7 +17,7 @@ public:
 
     void update(const sf::Time& time) override;
 
-    void onNotify(const GameEvent& event);
+    void onNotify(const GameEvent& event) override;
 
     Snake(Map& map);
     ~Snake();
@@ -26,6 +27,9 @@ private:
     Direction dirKeyboard_;
 
     Map& map_;
+    sf::Vector2u pointPos_;
+
+    bool isNextTail_;
 
     sf::Vector2u pos_;
     sf::Time deltaTime_;
@@ -37,7 +41,6 @@ private:
     struct Component{
         sf::Sprite sprite;
         Direction dir;
-        //sf::Vector2u nextPos;
         sf::Vector2u pos;
     };
 

@@ -105,6 +105,12 @@
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/gameObject.h">
 			<Option target="Snake"/>
 		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/point.cpp">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/point.h">
+			<Option target="Snake"/>
+		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/snake.cpp">
 			<Option target="Snake"/>
 		</Unit>
@@ -175,6 +181,12 @@
 			<Option target="Snake"/>
 		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/singleton.h">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/stats.cpp">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/stats.h">
 			<Option target="Snake"/>
 		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/CMakeLists.txt">

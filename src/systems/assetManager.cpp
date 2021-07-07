@@ -18,6 +18,8 @@ void AssetManager::load() {
     tail_upImage.loadFromFile("../assets/tail_top.png");
     tail_rightImage.loadFromFile("../assets/tail_right.png");
 
+    pointImage.loadFromFile("../assets/point.png");
+
     pathTexture.loadFromImage(pathImage);
     wallTexture.loadFromImage(wallImage);
 
@@ -31,6 +33,8 @@ void AssetManager::load() {
     tail_rightTexture.loadFromImage(tail_rightImage);
     tail_upTexture.loadFromImage(tail_upImage);
 
+    pointTexture.loadFromImage(pointImage);
+
     path.setTexture(pathTexture);
     wall.setTexture(wallTexture);
 
@@ -43,4 +47,8 @@ void AssetManager::load() {
     head_right.setTexture(head_rightTexture);
     head_up.setTexture(head_upTexture);
     head_down.setTexture(head_downTexture);
+
+    point.setTexture(pointTexture);
+
+    font.loadFromFile("../assets/Pixeled.ttf");
 }

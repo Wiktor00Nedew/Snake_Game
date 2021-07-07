@@ -13,7 +13,7 @@ void Snake::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 }
 
 void Snake::update(const sf::Time& time) {
-
+    isNextTail_ = false;
     deltaTime_ += time;
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
@@ -31,13 +31,24 @@ void Snake::update(const sf::Time& time) {
 
     sf::Vector2u nextPos_(pos_.x + dx[dir_], pos_.y + dy[dir_]);
 
+    for(unsigned i = 0; i < tailLength_; i++){
+        if(nextPos_ == tail_[i].pos)
+            isNextTail_ = true;
+    }
+
     while(deltaTime_ >= timeToPassField_){
+        /*
+        if(nextPos_.x == 80)
+            nextPos_.x = 0;
+        else if(nextPos_.x == 0)
+            nextPos_.x = 79;
 
-        /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::L)){
-            tailLength_++;
-            tail_.push_back(Component());
-        }*/
-
+        if(nextPos_.y == 45)
+            nextPos_.y = 0;
+        else if(nextPos_.y == 0){
+            nextPos_.y = 44;
+        }
+        *///not working right now
         for(unsigned i = tailLength_-1; i > 0; i--){
             tail_[i].dir = tail_[i-1].dir;
         }
@@ -74,29 +85,29 @@ void Snake::update(const sf::Time& time) {
             else if(dir_ == Down){
                 headSprite_ = &AssetManager::get().head_down;
             }
-
         }
 
-        if(map_.getField(nextPos_).isCanPass()){
+        if(map_.getField(nextPos_).isCanPass() && !isNextTail_){
             for(unsigned i = tailLength_-1; i > 0; i--){
                 tail_[i].pos = tail_[i-1].pos;
-                //std::cout << "Tail" << i << "Pos: " << tail_[i].pos.x << " " << tail_[i].pos.y << "\n";
-                //std::cout << "Tail" << i << "Dir: " << tail_[i].dir << "\n";
             }
 
             tail_.front().pos = pos_;
-            //std::cout << tail_.back().pos.x << " " << tail_.back().pos.y << "\n";
-            //std::cout << tail_.back().dir << "\n";
+
             pos_ = nextPos_;
             nextPos_ = sf::Vector2u(pos_.x + dx[dir_], pos_.y + dy[dir_]);
 
-            //std::cout << "HeadPos: " << pos_.x << " " << pos_.y << "\n";
-            //std::cout << "HeadDir: " << dir_ << "\n";
         }
         deltaTime_ -= timeToPassField_;
     }
 
-    if(map_.getField(nextPos_).isCanPass()){
+    if(nextPos_ == pointPos_){
+        GameEvent event;
+        event.type = GameEvent::PointEaten;
+        eventSender.notify(event);
+    }
+
+    if(map_.getField(nextPos_).isCanPass() && !isNextTail_){
         double change = 24 * deltaTime_.asSeconds() / timeToPassField_.asSeconds();
         headSprite_->setPosition(24 * pos_.x + dx[dir_] * change,
                                 24 * pos_.y + dy[dir_] * change);
@@ -105,21 +116,31 @@ void Snake::update(const sf::Time& time) {
             tail_[i].sprite.setPosition(24 * tail_[i].pos.x + dx[tail_[i].dir] * change,
                                   24 * tail_[i].pos.y + dy[tail_[i].dir] * change);
         }
-
     }
     else{
-        std::cout << "game over" << "\n";
         GameEvent event;
         event.type = GameEvent::GameOver;
         eventSender.notify(event);
-        //debug
-        active_ = false;
-        //debug
     }
 }
 
 void Snake::onNotify(const GameEvent& event) {
+    if(event.type == GameEvent::PointEaten){
+        tailLength_++;
+        tail_.push_back(Component());
+    }
+    else if(event.type == GameEvent::GameOver){
+        active_ = false;
 
+        headSprite_->setPosition(24 * pos_.x,24 * pos_.y);
+
+        for(unsigned i = 0; i < tailLength_; i++)
+            tail_[i].sprite.setPosition(24 * tail_[i].pos.x,24 * tail_[i].pos.y);
+
+    }
+    else if(event.type == GameEvent::PointCreated){
+        pointPos_ = event.pointCreated.pos;
+    }
 }
 
 Snake::Snake(Map& map) : map_(map){
@@ -128,14 +149,13 @@ Snake::Snake(Map& map) : map_(map){
     dirKeyboard_ = None;
     pos_ = sf::Vector2u(20, 20);
     deltaTime_ = sf::Time::Zero;
-    timeToPassField_ = sf::milliseconds(200);
+    timeToPassField_ = sf::milliseconds(160);
     tailLength_ = 2;
     for(unsigned i = 0; i < tailLength_; i++){
         tail_.push_back(Component());
     }
     for(unsigned i = 0; i < tailLength_; i++){
         tail_[i].dir = dir_;
-        //t.nextPos = pos_;
         tail_[i].pos = pos_;
         tail_[i].sprite = AssetManager::get().tail_right;
         tail_[i].sprite.setPosition(pos_.x * 24, pos_.y * 24);

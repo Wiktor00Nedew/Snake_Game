@@ -9,6 +9,7 @@
 #include <systems/scene.h>
 #include <state/machine.h>
 #include <systems/map.h>
+#include <systems/stats.h>
 
 class Game : public Listener<GameEvent>, public Listener<sf::Event> {
 private:
@@ -17,6 +18,8 @@ private:
     Machine scenes_;
 
     Map map_;
+
+    Stats stats_;
 
 public:
 	void run();	//runs the whole game loop

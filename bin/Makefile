@@ -249,6 +249,33 @@ src/objects/gameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/gameObject.cpp.s
 .PHONY : src/objects/gameObject.cpp.s
 
+src/objects/point.obj: src/objects/point.cpp.obj
+
+.PHONY : src/objects/point.obj
+
+# target to build an object file
+src/objects/point.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/point.cpp.obj
+.PHONY : src/objects/point.cpp.obj
+
+src/objects/point.i: src/objects/point.cpp.i
+
+.PHONY : src/objects/point.i
+
+# target to preprocess a source file
+src/objects/point.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/point.cpp.i
+.PHONY : src/objects/point.cpp.i
+
+src/objects/point.s: src/objects/point.cpp.s
+
+.PHONY : src/objects/point.s
+
+# target to generate assembly for a file
+src/objects/point.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/objects/point.cpp.s
+.PHONY : src/objects/point.cpp.s
+
 src/objects/snake.obj: src/objects/snake.cpp.obj
 
 .PHONY : src/objects/snake.obj
@@ -573,6 +600,33 @@ src/systems/singleton.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/singleton.cpp.s
 .PHONY : src/systems/singleton.cpp.s
 
+src/systems/stats.obj: src/systems/stats.cpp.obj
+
+.PHONY : src/systems/stats.obj
+
+# target to build an object file
+src/systems/stats.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/stats.cpp.obj
+.PHONY : src/systems/stats.cpp.obj
+
+src/systems/stats.i: src/systems/stats.cpp.i
+
+.PHONY : src/systems/stats.i
+
+# target to preprocess a source file
+src/systems/stats.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/stats.cpp.i
+.PHONY : src/systems/stats.cpp.i
+
+src/systems/stats.s: src/systems/stats.cpp.s
+
+.PHONY : src/systems/stats.s
+
+# target to generate assembly for a file
+src/systems/stats.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/stats.cpp.s
+.PHONY : src/systems/stats.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -594,6 +648,9 @@ help:
 	@echo ... src/objects/gameObject.obj
 	@echo ... src/objects/gameObject.i
 	@echo ... src/objects/gameObject.s
+	@echo ... src/objects/point.obj
+	@echo ... src/objects/point.i
+	@echo ... src/objects/point.s
 	@echo ... src/objects/snake.obj
 	@echo ... src/objects/snake.i
 	@echo ... src/objects/snake.s
@@ -630,6 +687,9 @@ help:
 	@echo ... src/systems/singleton.obj
 	@echo ... src/systems/singleton.i
 	@echo ... src/systems/singleton.s
+	@echo ... src/systems/stats.obj
+	@echo ... src/systems/stats.i
+	@echo ... src/systems/stats.s
 .PHONY : help
 
 

@@ -24,7 +24,14 @@ public:
     sf::Sprite tail_left;
     sf::Sprite tail_down;
 
+    sf::Sprite point;
+
+    sf::Font font;
+
 private:
+    sf::Image pointImage;
+    sf::Texture pointTexture;
+
     sf::Image wallImage;
     sf::Image pathImage;
     sf::Texture wallTexture;

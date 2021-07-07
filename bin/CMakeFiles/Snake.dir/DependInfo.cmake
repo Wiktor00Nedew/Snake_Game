@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/game.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/game.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/main.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/main.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/gameObject.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/objects/gameObject.cpp.obj"
+  "C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/point.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/objects/point.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/snake.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/objects/snake.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/machine.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/state/machine.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/state/state.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/state/state.cpp.obj"
@@ -20,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/scene.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/scene.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/signal.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/signal.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/singleton.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/singleton.cpp.obj"
+  "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/stats.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/stats.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
