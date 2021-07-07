@@ -37,18 +37,7 @@ void Snake::update(const sf::Time& time) {
     }
 
     while(deltaTime_ >= timeToPassField_){
-        /*
-        if(nextPos_.x == 80)
-            nextPos_.x = 0;
-        else if(nextPos_.x == 0)
-            nextPos_.x = 79;
 
-        if(nextPos_.y == 45)
-            nextPos_.y = 0;
-        else if(nextPos_.y == 0){
-            nextPos_.y = 44;
-        }
-        *///not working right now
         for(unsigned i = tailLength_-1; i > 0; i--){
             tail_[i].dir = tail_[i-1].dir;
         }
