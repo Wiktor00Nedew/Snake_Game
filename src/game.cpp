@@ -15,12 +15,12 @@ void Game::run() {
 		InputHandler::get().handleEvents();
 
 		scene->update(time);
-		//std::cout << "updated scene" << "\n";
+
+		eventSender.handleEvents();
         window_.clear();
         if(scene->type == Scene::Game)
             window_.draw(map_);
         window_.draw(*scene);
-        //std::cout << "drawn scene" << "\n";
 		window_.display();
 	}
     eventSender.removeListener(this);

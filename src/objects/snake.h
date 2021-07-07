@@ -35,7 +35,7 @@ private:
     sf::Sprite* headSprite_;
 
     struct Component{
-        sf::Sprite* sprite;
+        sf::Sprite sprite;
         Direction dir;
         //sf::Vector2u nextPos;
         sf::Vector2u pos;

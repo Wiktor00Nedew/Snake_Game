@@ -7,12 +7,13 @@
 #include <iostream>
 
 void Snake::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    for(auto& t : tail_)
-        target.draw(*t.sprite, states);
+    for(unsigned i = 0; i < tailLength_; i++)
+        target.draw(tail_[i].sprite, states);
     target.draw(*headSprite_, states);
 }
 
 void Snake::update(const sf::Time& time) {
+
     deltaTime_ += time;
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
@@ -32,23 +33,28 @@ void Snake::update(const sf::Time& time) {
 
     while(deltaTime_ >= timeToPassField_){
 
-        for(unsigned i = 0; i < tailLength_-1; i++){
-            tail_[i].dir = tail_[i+1].dir;
-        }
-        tail_.back().dir = dir_;
+        /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::L)){
+            tailLength_++;
+            tail_.push_back(Component());
+        }*/
 
-        for(auto& t : tail_){
-            if(t.dir == Left){
-                t.sprite = &AssetManager::get().tail_left;
+        for(unsigned i = tailLength_-1; i > 0; i--){
+            tail_[i].dir = tail_[i-1].dir;
+        }
+        tail_.front().dir = dir_;
+
+        for(unsigned i = 0; i < tailLength_; i++){
+            if(tail_[i].dir == Left){
+                tail_[i].sprite = AssetManager::get().tail_left;
             }
-            else if(t.dir == Right){
-                t.sprite = &AssetManager::get().tail_right;
+            else if(tail_[i].dir == Right){
+                tail_[i].sprite = AssetManager::get().tail_right;
             }
-            else if(t.dir == Up){
-                t.sprite = &AssetManager::get().tail_up;
+            else if(tail_[i].dir == Up){
+                tail_[i].sprite = AssetManager::get().tail_up;
             }
-            else if(t.dir == Down){
-                t.sprite = &AssetManager::get().tail_down;
+            else if(tail_[i].dir == Down){
+                tail_[i].sprite = AssetManager::get().tail_down;
             }
         }
 
@@ -72,20 +78,20 @@ void Snake::update(const sf::Time& time) {
         }
 
         if(map_.getField(nextPos_).isCanPass()){
-            for(unsigned i = 0; i < tailLength_-1; i++){
-                tail_[i].pos = tail_[i+1].pos;
-                std::cout << "Tail" << i << "Pos: " << tail_[i].pos.x << " " << tail_[i].pos.y << "\n";
-                std::cout << "Tail" << i << "Dir: " << tail_[i].dir << "\n";
+            for(unsigned i = tailLength_-1; i > 0; i--){
+                tail_[i].pos = tail_[i-1].pos;
+                //std::cout << "Tail" << i << "Pos: " << tail_[i].pos.x << " " << tail_[i].pos.y << "\n";
+                //std::cout << "Tail" << i << "Dir: " << tail_[i].dir << "\n";
             }
 
-            tail_.back().pos = pos_;
-            std::cout << tail_.back().pos.x << " " << tail_.back().pos.y << "\n";
-            std::cout << tail_.back().dir << "\n";
+            tail_.front().pos = pos_;
+            //std::cout << tail_.back().pos.x << " " << tail_.back().pos.y << "\n";
+            //std::cout << tail_.back().dir << "\n";
             pos_ = nextPos_;
             nextPos_ = sf::Vector2u(pos_.x + dx[dir_], pos_.y + dy[dir_]);
 
-            std::cout << "HeadPos: " << pos_.x << " " << pos_.y << "\n";
-            std::cout << "HeadDir: " << dir_ << "\n";
+            //std::cout << "HeadPos: " << pos_.x << " " << pos_.y << "\n";
+            //std::cout << "HeadDir: " << dir_ << "\n";
         }
         deltaTime_ -= timeToPassField_;
     }
@@ -95,10 +101,11 @@ void Snake::update(const sf::Time& time) {
         headSprite_->setPosition(24 * pos_.x + dx[dir_] * change,
                                 24 * pos_.y + dy[dir_] * change);
 
-        for(auto& t : tail_){
-            t.sprite->setPosition(24 * t.pos.x + dx[t.dir] * change,
-                                  24 * t.pos.y + dy[t.dir] * change);
+        for(unsigned i = 0; i < tailLength_; i++){
+            tail_[i].sprite.setPosition(24 * tail_[i].pos.x + dx[tail_[i].dir] * change,
+                                  24 * tail_[i].pos.y + dy[tail_[i].dir] * change);
         }
+
     }
     else{
         std::cout << "game over" << "\n";
@@ -122,16 +129,16 @@ Snake::Snake(Map& map) : map_(map){
     pos_ = sf::Vector2u(20, 20);
     deltaTime_ = sf::Time::Zero;
     timeToPassField_ = sf::milliseconds(200);
-    tailLength_ = 3;
+    tailLength_ = 2;
     for(unsigned i = 0; i < tailLength_; i++){
         tail_.push_back(Component());
     }
-    for(auto& t : tail_){
-        t.dir = dir_;
+    for(unsigned i = 0; i < tailLength_; i++){
+        tail_[i].dir = dir_;
         //t.nextPos = pos_;
-        t.pos = pos_;
-        t.sprite = &AssetManager::get().tail_right;
-        t.sprite->setPosition(pos_.x * 24, pos_.y * 24);
+        tail_[i].pos = pos_;
+        tail_[i].sprite = AssetManager::get().tail_right;
+        tail_[i].sprite.setPosition(pos_.x * 24, pos_.y * 24);
     }
 
     headSprite_->setPosition(pos_.x * 24, pos_.y * 24);
