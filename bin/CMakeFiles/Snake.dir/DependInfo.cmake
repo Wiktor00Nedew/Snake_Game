@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/events/gameEvent.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/events/gameEvent.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/game.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/game.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/main.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/main.cpp.obj"
+  "C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/button.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/objects/button.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/gameObject.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/objects/gameObject.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/point.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/objects/point.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/objects/snake.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/objects/snake.cpp.obj"

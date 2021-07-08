@@ -18,11 +18,18 @@ struct GameEvent {
 	    sf::Vector2u pos;
 	};
 
+	struct PointEatenEvent{
+	   std::vector<sf::Vector2u> positions;
+	};
+
 	Type type;	//event type
 
 	union {
 	    PointCreatedEvent pointCreated;
+        PointEatenEvent pointEaten;
 	};
+
+
 };
 
 extern Signal<GameEvent> eventSender;	//main game event signal  

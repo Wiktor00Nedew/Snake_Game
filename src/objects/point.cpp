@@ -11,7 +11,7 @@ Point::Point(Map& map) : map_(map){
     newPos_ = sf::Vector2u(rand() % 80, rand() % 45);
     while(!map_.getField(newPos_).isCanPass()){
         newPos_ = sf::Vector2u(rand() % 80, rand() % 45);
-    }
+    }//TODO check whether there is no snake
     pos_ = newPos_;
     sprite_->setPosition(24 * pos_.x, 24 * pos_.y);
     GameEvent event1;
@@ -35,9 +35,18 @@ void Point::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 
 void Point::onNotify(const GameEvent& event) {
     if(event.type == GameEvent::PointEaten){
+        bool isSnake = false;
         newPos_ = sf::Vector2u(rand() % 80, rand() % 45);
-        while(!map_.getField(newPos_).isCanPass()){
+        for(const auto& pos : event.pointEaten.positions){
+            if(newPos_ == pos)
+                isSnake = true;
+        }
+        while(!map_.getField(newPos_).isCanPass() || isSnake){
             newPos_ = sf::Vector2u(rand() % 80, rand() % 45);
+            for(const auto& pos : event.pointEaten.positions){
+                if(newPos_ == pos)
+                    isSnake = true;
+            }
         }
         pos_ = newPos_;
         sprite_->setPosition(24 * pos_.x, 24 * pos_.y);

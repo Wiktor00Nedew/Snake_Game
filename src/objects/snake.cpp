@@ -93,6 +93,10 @@ void Snake::update(const sf::Time& time) {
     if(nextPos_ == pointPos_){
         GameEvent event;
         event.type = GameEvent::PointEaten;
+        for(unsigned i = 0; i < tailLength_; i++){
+            event.pointEaten.positions.push_back(tail_[i].pos);
+        }
+        event.pointEaten.positions.push_back(pos_);
         eventSender.notify(event);
     }
 
