@@ -26,10 +26,9 @@ struct GameEvent {
 
 	union {
 	    PointCreatedEvent pointCreated;
-        PointEatenEvent pointEaten;
 	};
 
-
+    PointEatenEvent pointEaten;
 };
 
 extern Signal<GameEvent> eventSender;	//main game event signal  
