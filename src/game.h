@@ -10,6 +10,7 @@
 #include <state/machine.h>
 #include <systems/map.h>
 #include <systems/stats.h>
+#include <SFML/Audio.hpp>
 
 class Game : public Listener<GameEvent>, public Listener<sf::Event> {
 private:
@@ -21,6 +22,9 @@ private:
 
     Stats stats_;
 
+    sf::Music gameMusic;
+    sf::Music menuMusic;
+
 public:
 	void run();	//runs the whole game loop
 	void onNotify(const GameEvent& event) override;	//reacts to events
@@ -29,6 +33,10 @@ public:
 	~Game();	//destructor
 	Scene* getScene();
 	Scene* newGame();
+    Scene* newMenu();
+
+	void startGameMusic();
+	void startMenuMusic();
 };
 #endif // !SNAKE_GAME_H
 

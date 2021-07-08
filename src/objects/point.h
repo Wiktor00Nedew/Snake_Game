@@ -8,6 +8,7 @@
 #include <systems/map.h>
 #include <events/gameEvent.h>
 #include "gameObject.h"
+#include <systems/soundManager.h>
 
 class Point : public GameObject, public Listener<GameEvent>{
 private:
@@ -17,6 +18,9 @@ private:
     sf::Vector2u pos_;
 
     sf::Vector2u newPos_;
+
+    SoundManager manager;
+    sf::SoundBuffer collectSound;
 
 public:
     Point(Map& map);

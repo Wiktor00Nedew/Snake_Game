@@ -189,6 +189,12 @@
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/singleton.h">
 			<Option target="Snake"/>
 		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/soundManager.cpp">
+			<Option target="Snake"/>
+		</Unit>
+		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/soundManager.h">
+			<Option target="Snake"/>
+		</Unit>
 		<Unit filename="C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/stats.cpp">
 			<Option target="Snake"/>
 		</Unit>

@@ -627,6 +627,33 @@ src/systems/singleton.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/singleton.cpp.s
 .PHONY : src/systems/singleton.cpp.s
 
+src/systems/soundManager.obj: src/systems/soundManager.cpp.obj
+
+.PHONY : src/systems/soundManager.obj
+
+# target to build an object file
+src/systems/soundManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/soundManager.cpp.obj
+.PHONY : src/systems/soundManager.cpp.obj
+
+src/systems/soundManager.i: src/systems/soundManager.cpp.i
+
+.PHONY : src/systems/soundManager.i
+
+# target to preprocess a source file
+src/systems/soundManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/soundManager.cpp.i
+.PHONY : src/systems/soundManager.cpp.i
+
+src/systems/soundManager.s: src/systems/soundManager.cpp.s
+
+.PHONY : src/systems/soundManager.s
+
+# target to generate assembly for a file
+src/systems/soundManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Snake.dir\build.make CMakeFiles/Snake.dir/src/systems/soundManager.cpp.s
+.PHONY : src/systems/soundManager.cpp.s
+
 src/systems/stats.obj: src/systems/stats.cpp.obj
 
 .PHONY : src/systems/stats.obj
@@ -717,6 +744,9 @@ help:
 	@echo ... src/systems/singleton.obj
 	@echo ... src/systems/singleton.i
 	@echo ... src/systems/singleton.s
+	@echo ... src/systems/soundManager.obj
+	@echo ... src/systems/soundManager.i
+	@echo ... src/systems/soundManager.s
 	@echo ... src/systems/stats.obj
 	@echo ... src/systems/stats.i
 	@echo ... src/systems/stats.s

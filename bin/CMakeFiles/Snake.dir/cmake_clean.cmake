@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Snake.dir/src/systems/scene.cpp.obj"
   "CMakeFiles/Snake.dir/src/systems/signal.cpp.obj"
   "CMakeFiles/Snake.dir/src/systems/singleton.cpp.obj"
+  "CMakeFiles/Snake.dir/src/systems/soundManager.cpp.obj"
   "CMakeFiles/Snake.dir/src/systems/stats.cpp.obj"
   "Snake.exe"
   "Snake.exe.manifest"

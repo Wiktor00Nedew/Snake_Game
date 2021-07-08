@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/scene.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/scene.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/signal.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/signal.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/singleton.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/singleton.cpp.obj"
+  "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/soundManager.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/soundManager.cpp.obj"
   "C:/Users/Wiktor/CLionProjects/Snake_Game/src/systems/stats.cpp" "C:/Users/Wiktor/CLionProjects/Snake_Game/bin/CMakeFiles/Snake.dir/src/systems/stats.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

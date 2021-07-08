@@ -19,6 +19,7 @@ Point::Point(Map& map) : map_(map){
     event1.pointCreated.pos = pos_;
     eventSender.notify(event1);
     eventSender.addListener(this);
+    collectSound.loadFromFile("../assets/point.wav");
 }
 
 Point::~Point() {
@@ -35,6 +36,7 @@ void Point::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 
 void Point::onNotify(const GameEvent& event) {
     if(event.type == GameEvent::PointEaten){
+        manager.play(collectSound);
         bool isSnake = false;
         newPos_ = sf::Vector2u(rand() % 80, rand() % 45);
         for(const auto& pos : event.pointEaten.positions){
