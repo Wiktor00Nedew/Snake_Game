@@ -61,6 +61,7 @@ Button::Button(std::function<void()> f, const sf::Vector2f &position, const std:
     text_.setPosition(position.x - text_.getLocalBounds().width / 2, position.y - text_.getLocalBounds().height / 2);
     state_ = Default;
     InputHandler::get().addListener(this);
+    clickSound.loadFromFile("../assets/click.wav");
 }
 
 Button::~Button() {
