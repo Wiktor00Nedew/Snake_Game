@@ -25,6 +25,9 @@ private:
     sf::Music gameMusic;
     sf::Music menuMusic;
 
+    sf::Text credits1_;
+    sf::Text credits2_;
+
 public:
 	void run();	//runs the whole game loop
 	void onNotify(const GameEvent& event) override;	//reacts to events
