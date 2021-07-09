@@ -47,6 +47,7 @@ Game::Game() {
 
 void Game::onNotify(const GameEvent& event) {
     if(event.type == GameEvent::GameOver){
+        stats_.setPoints(0);
         scenes_.replace(newMenu());
     }
 }
