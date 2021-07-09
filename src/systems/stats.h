@@ -38,6 +38,9 @@ private:
 
     sf::Text pointText_;
     sf::Text highScoreText_;
+
+    sf::Text credits1_;
+    sf::Text credits2_;
 };
 
 

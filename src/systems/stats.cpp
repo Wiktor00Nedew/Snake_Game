@@ -19,6 +19,18 @@ Stats::Stats() {
     pointText_.setCharacterSize(36);
     highScoreText_.setCharacterSize(36);
 
+    credits1_.setCharacterSize(12);
+    credits2_.setCharacterSize(12);
+
+    credits1_.setPosition(72, 24 * 42);
+    credits2_.setPosition(72, 24 * 44);
+
+    credits1_.setFont(AssetManager::get().font);
+    credits2_.setFont(AssetManager::get().font);
+
+    credits1_.setString("blackSnow by airtone (c) copyright 2021 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/airtone/63513");
+    credits2_.setString("The night is calling by Kraftamt (c) copyright 2020 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/Karstenholymoly/62739 Ft: mwic");
+
     eventSender.addListener(this);
 }
 
@@ -29,6 +41,8 @@ Stats::~Stats() {
 void Stats::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(pointText_, states);
     target.draw(highScoreText_, states);
+    target.draw(credits2_, states);
+    target.draw(credits1_, states);
 }
 
 void Stats::onNotify(const GameEvent &event) {
