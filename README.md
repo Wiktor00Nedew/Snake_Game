@@ -9,4 +9,4 @@ Minimum requirements:
 x64 CPU,
 50 MB of RAM,
 Integrated GPU,
-35 MB of free hard drive space
+122 MB of free hard drive space
