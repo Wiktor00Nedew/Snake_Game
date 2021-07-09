@@ -39,13 +39,15 @@ void Point::onNotify(const GameEvent& event) {
         manager.play(collectSound);
         bool isSnake = false;
         newPos_ = sf::Vector2u(rand() % 80, rand() % 45);
-        for(const auto& pos : event.pointEaten.positions){
+        for(auto& pos : event.pointEaten.positions){
             if(newPos_ == pos)
                 isSnake = true;
         }
+
         while(!map_.getField(newPos_).isCanPass() || isSnake){
+            isSnake = false;
             newPos_ = sf::Vector2u(rand() % 80, rand() % 45);
-            for(const auto& pos : event.pointEaten.positions){
+            for(auto& pos : event.pointEaten.positions){
                 if(newPos_ == pos)
                     isSnake = true;
             }
